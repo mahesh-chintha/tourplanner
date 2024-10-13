@@ -1,0 +1,31 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.container{
+    width:100%
+}
+.cardn{
+box-shadow: 1px 2px 3px black;
+margin-bottom: 5vh;
+margin-top: 3vh;
+   }
+.imgc {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+#output{
+    margin-left: 0vw;
+    padding-left: 0vw;
+}
+.container .row{
+    margin-left: 0vw;
+    padding-left: 0vw;   
+}
+.carousel-item img {
+    height: 50vh; /* Set to 50% of the viewport height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+

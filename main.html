@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="tripdetails">Trip details</a>
+              </li>
+              </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbar">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+<!-- carousel -->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="jsproj images/cr1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="jsproj images/cr2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="jsproj images/cr3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="jsproj images/cr4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+
+    <!-- cards -->
+    <div class="container-fluid out">
+        <div id="output" class="row g-3"></div>
+    </div>
+  
+    <!-- packages -->
+    <div class="container-fluid mt-5">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Package</h5>
+                        <p class="card-text">Enjoy a luxury stay at a 5-star resort with all-inclusive meals, exclusive tours, and more!</p>
+                        <p class="text-success fw-bold">Price: $1,499</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Adventure Package</h5>
+                        <p class="card-text">Explore the great outdoors with exciting hiking and camping experiences!</p>
+                        <p class="text-success fw-bold">Price: $999</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cultural Experience</h5>
+                        <p class="card-text">Immerse yourself in the local culture with guided tours and authentic cuisine!</p>
+                        <p class="text-success fw-bold">Price: $1,200</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Beach Getaway</h5>
+                        <p class="card-text">Relax on the beautiful beaches with sunbathing, swimming, and water sports!</p>
+                        <p class="text-success fw-bold">Price: $850</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Family Fun Package</h5>
+                        <p class="card-text">Enjoy a family-friendly vacation with activities for all ages!</p>
+                        <p class="text-success fw-bold">Price: $1,100</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Package Image 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Cruise</h5>
+                        <p class="card-text">Set sail on a luxurious cruise with top-notch amenities and entertainment!</p>
+                        <p class="text-success fw-bold">Price: $2,499</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-primary w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <!-- bookings -->
+    <!-- Booking Form -->
+<div class="container mt-5">
+    <h2>Book Your Trip</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="package" class="form-label">Select Package</label>
+            <select class="form-select" id="package" required>
+                <option value="" disabled selected>Select a package</option>
+                <option value="Premium Package">Premium Package - $1,499</option>
+                <option value="Adventure Package">Adventure Package - $999</option>
+                <option value="Cultural Experience">Cultural Experience - $1,200</option>
+                <option value="Beach Getaway">Beach Getaway - $850</option>
+                <option value="Family Fun Package">Family Fun Package - $1,100</option>
+                <option value="Luxury Cruise">Luxury Cruise - $2,499</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Booking Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+        <button type="submit" class="btn btn-success">Book Now</button>
+    </form>
+</div>
+<!-- trip details -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
