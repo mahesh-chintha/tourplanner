@@ -24,8 +24,20 @@ margin-top: 3vh;
     padding-left: 0vw;   
 }
 .carousel-item img {
-    height: 50vh; /* Set to 50% of the viewport height */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    height: 50vh; 
+    object-fit: cover; 
 }
-
-
+#tripdetailsoutput{
+    display: none;
+    position: absolute;
+}
+.navbar{
+    position:relative;
+    top:0;
+    z-index: 1000;
+    width:100%;
+}
+#tripdetailsoutput{
+    background-color: black;
+    color: white;
+}

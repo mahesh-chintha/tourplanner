@@ -24,6 +24,24 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="tripdetails">Trip details</a>
+                <div id="tripdetailsoutput">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Packages</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                       <tbody id="tripdetails2">
+                        
+
+                       </tbody>
+                    </table>
+
+
+                     </div>
               </li>
               </ul>
             <form class="d-flex" role="search">
@@ -182,7 +200,7 @@
             <label for="date" class="form-label">Booking Date</label>
             <input type="date" class="form-control" id="date" required>
         </div>
-        <button type="submit" class="btn btn-success">Book Now</button>
+        <button type="submit" class="btn btn-success" id="book">Book Now</button>
     </form>
 </div>
 <!-- trip details -->

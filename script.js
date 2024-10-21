@@ -1,41 +1,37 @@
+var ind1 = document.getElementById("ind1");
+var ind2 = document.getElementById("ind2");
+var ind3 = document.getElementById("ind3");
+var ind4 = document.getElementById("ind4");
+var signup = document.getElementById("signup");
+var login1 = document.getElementById("btn3");
+if (signup) {
+    signup.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (ind1.value.trim() !== "" && ind2.value.trim() !== "") {
+            localStorage.setItem("ind1", ind1.value);
+            localStorage.setItem("ind2", ind2.value);
+            alert("Successfully registered");
+            ind1.value = '';
+            ind2.value = '';
+        } else {
+            alert("Please fill in both fields.");
+        }
+    });
+}
 
-    var ind1 = document.getElementById("ind1");
-    var ind2 = document.getElementById("ind2");
-    var ind3 = document.getElementById("ind3");
-    var ind4 = document.getElementById("ind4");
-    var signup = document.getElementById("signup");
-    var login1 = document.getElementById("btn3");
-    if (signup) {
-        signup.addEventListener("click", function(event) {
-            event.preventDefault();
-            if (ind1.value.trim() !== "" && ind2.value.trim() !== "") {
-                localStorage.setItem("ind1", ind1.value);
-                localStorage.setItem("ind2", ind2.value);
-                alert("Successfully registered");
-                ind1.value = '';
-                ind2.value = '';
-            } else {
-                alert("Please fill in both fields.");
-            }
-        });
-    }
-    
-   if (login1) {
-        login1.addEventListener("click", function(event) {
-            event.preventDefault();
-            var key1 = localStorage.getItem("ind1");
-            var key2 = localStorage.getItem("ind2");
-            if (key1 === ind3.value && key2 === ind4.value) {
-                window.location.href = "main.html";
-            } else {
-                alert("Not registered");
-            }
+if (login1) {
+    login1.addEventListener("click", function(event) {
+        event.preventDefault();
+        var key1 = localStorage.getItem("ind1");
+        var key2 = localStorage.getItem("ind2");
+        if (key1 === ind3.value && key2 === ind4.value) {
+            window.location.href = "main.html";
+        } else {
+            alert("Not registered");
+        }
+    });
+}
 
-        });
-    }
-
-
-console.log(ind1,ind2,ind3,ind4)
 const destinations = [
     {
         name: "The Colosseum",
@@ -73,6 +69,7 @@ const destinations = [
         reviews: 5
     }
 ];
+
 var output = document.getElementById("output");
 
 function displayoutput(list) {
@@ -126,7 +123,6 @@ function displayoutput(list) {
 
 displayoutput(destinations);
 
-
 function searchoutput() {
     var searchbar = document.getElementById("searchbar").value.toLowerCase();
     var out1 = destinations.filter((destination) => {
@@ -137,3 +133,46 @@ function searchoutput() {
 
 document.getElementById("searchbar").addEventListener("input", searchoutput);
 displayoutput(destinations);
+
+var names = document.getElementById("name");
+var email = document.getElementById("email");
+var package = document.getElementById("package");
+var date = document.getElementById("date");
+var book = document.getElementById("book");
+var tripdetails = document.getElementById("tripdetails");
+var tripdetails1 = document.getElementById("tripdetailsoutput");
+
+tripdetails.addEventListener("click", (event) => {
+    event.preventDefault();
+    var namev = localStorage.getItem("nameval");
+    var emailv = localStorage.getItem("emailval");
+    var packagev = localStorage.getItem("packageval");
+    var datev = localStorage.getItem("dateval");
+
+    if (tripdetails1.style.display === "none" || tripdetails1.style.display === "") {
+        tripdetails1.style.display = "block";
+        tripdetails1.innerHTML = `
+            <p><strong>Name:</strong> ${namev ? namev : "Not available"}</p>
+            <p><strong>Email:</strong> ${emailv ? emailv : "Not available"}</p>
+            <p><strong>Package:</strong> ${packagev ? packagev : "Not available"}</p>
+            <p><strong>Date:</strong> ${datev ? datev : "Not available"}</p>
+        `;
+    } else {
+        tripdetails1.style.display = "none";
+    }
+});
+
+
+book.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (names.value && email.value && package.value && date.value) {
+         localStorage.setItem("nameval",names.value)
+         localStorage.setItem("emailval",email.value)
+         localStorage.setItem("packageval",package.value)
+         localStorage.setItem("dateval",date.value)
+         localStorage.setItem("bookval",book.value)
+
+    } else {
+        alert("Please fill in all fields.");
+    }
+});
