@@ -4,12 +4,12 @@ var ind3 = document.getElementById("ind3");
 var ind4 = document.getElementById("ind4");
 var signup = document.getElementById("signup");
 var login1 = document.getElementById("btn3");
+
 if (signup) {
     signup.addEventListener("click", function(event) {
         event.preventDefault();
         if (ind1.value.trim() !== "" && ind2.value.trim() !== "") {
-            localStorage.setItem("ind1", ind1.value);
-            localStorage.setItem("ind2", ind2.value);
+            localStorage.setItem(ind1.value + "_password", ind2.value);
             alert("Successfully registered");
             ind1.value = '';
             ind2.value = '';
@@ -22,10 +22,10 @@ if (signup) {
 if (login1) {
     login1.addEventListener("click", function(event) {
         event.preventDefault();
-        var key1 = localStorage.getItem("ind1");
-        var key2 = localStorage.getItem("ind2");
-        if (key1 === ind3.value && key2 === ind4.value) {
-            window.location.href = "main.html";
+        var key1 = localStorage.getItem(ind3.value + "_password");
+        if (key1 === ind4.value) {
+            localStorage.setItem("currentUser", ind3.value);
+            window.open("main.html","_self")
         } else {
             alert("Not registered");
         }
@@ -132,7 +132,6 @@ function searchoutput() {
 }
 
 document.getElementById("searchbar").addEventListener("input", searchoutput);
-displayoutput(destinations);
 
 var names = document.getElementById("name");
 var email = document.getElementById("email");
@@ -144,10 +143,12 @@ var tripdetails1 = document.getElementById("tripdetailsoutput");
 
 tripdetails.addEventListener("click", (event) => {
     event.preventDefault();
-    var namev = localStorage.getItem("nameval");
-    var emailv = localStorage.getItem("emailval");
-    var packagev = localStorage.getItem("packageval");
-    var datev = localStorage.getItem("dateval");
+    var currentUser = localStorage.getItem("currentUser");
+    // Retrieve user-specific details
+    var namev = localStorage.getItem(currentUser + "_name");
+    var emailv = localStorage.getItem(currentUser + "_email");
+    var packagev = localStorage.getItem(currentUser + "_package");
+    var datev = localStorage.getItem(currentUser + "_date");
 
     if (tripdetails1.style.display === "none" || tripdetails1.style.display === "") {
         tripdetails1.style.display = "block";
@@ -162,17 +163,23 @@ tripdetails.addEventListener("click", (event) => {
     }
 });
 
-
 book.addEventListener("click", (event) => {
     event.preventDefault();
     if (names.value && email.value && package.value && date.value) {
-         localStorage.setItem("nameval",names.value)
-         localStorage.setItem("emailval",email.value)
-         localStorage.setItem("packageval",package.value)
-         localStorage.setItem("dateval",date.value)
-         localStorage.setItem("bookval",book.value)
+        var currentUser = localStorage.getItem("currentUser");
+        // Store booking details with the current user's unique identifier
+        localStorage.setItem(currentUser + "_name", names.value);
+        localStorage.setItem(currentUser + "_email", email.value);
+        localStorage.setItem(currentUser + "_package", package.value);
+        localStorage.setItem(currentUser + "_date", date.value);
 
+        alert("Booking details saved successfully!");
     } else {
         alert("Please fill in all fields.");
     }
 });
+// logout
+var logout=document.getElementById("logoutBtn")
+logout.addEventListener("click",()=>{
+    window.location.href="index.html"
+})
