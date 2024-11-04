@@ -37,35 +37,35 @@ const destinations = [
         name: "The Colosseum",
         category: "Historical",
         description: "A historic Roman amphitheater located in the heart of Rome.",
-        image: "https://via.placeholder.com/300x200.png?text=Colosseum",
+        image: "https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg",
         reviews: 5
     },
     {
         name: "Yellowstone National Park",
         category: "Natural",
         description: "A vast national park known for its wildlife and geothermal features.",
-        image: "https://via.placeholder.com/300x200.png?text=Yellowstone",
+        image: "https://cdn.britannica.com/97/122097-050-B89080F4/Morning-Glory-Pool-Upper-Geyser-Basin-Wyoming.jpg",
         reviews: 4
     },
     {
         name: "The Louvre",
         category: "Museum",
         description: "The world's largest art museum and a historic monument in Paris.",
-        image: "https://via.placeholder.com/300x200.png?text=Louvre",
+        image: "https://cdn.britannica.com/74/250074-050-DD110B36/IM-Pei-designed-pyramid-Louvre-Paris-France.jpg",
         reviews: 5
     },
     {
         name: "Yosemite National Park",
         category: "Natural",
         description: "A beautiful national park known for its giant, ancient sequoias and iconic cliffs.",
-        image: "https://via.placeholder.com/300x200.png?text=Yosemite",
+        image: "https://www.travelandleisure.com/thmb/4gCV8cgTfnsnOQ2n3adR9dSaOI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/yosemite-national-park-landscape-lead-WINTERYOSEMITE0322-513572cd8d8d429d82ffbfc996c77c84.jpg",
         reviews: 4
     },
     {
         name: "The Acropolis",
         category: "Historical",
         description: "An ancient citadel located on a rocky outcrop above the city of Athens.",
-        image: "https://via.placeholder.com/300x200.png?text=Acropolis",
+        image: "https://cdn.thecollector.com/wp-content/uploads/2023/04/acropolis-museum-guide.jpg?width=1400&quality=70",
         reviews: 5
     }
 ];
